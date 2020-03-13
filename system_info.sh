@@ -1,10 +1,10 @@
 #!/bin/bash
 
 #############################################
-# 	Author: Somesh K Prajapati	    #
+# 	Author: Paolo Romagnoli	    			#
 #############################################
 
-out_file_path=/home/somesh/sysinfo.out
+out_file_path=~/sysinfo.out
 
 echo -e "**************************************************************************************************" >> $out_file_path
 echo -e "******************************************* SYSTEM INFO ******************************************" >> $out_file_path
