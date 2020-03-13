@@ -14,7 +14,7 @@ echo -e "\n\n========================================= HOST INFO ===============
 echo -e "\tHostname:\t"`hostname` >> $out_file_path
 
 echo -e "\n\n========================================== OS INFO ===========================================\n" >> $out_file_path
-echo -e "\tOS Info:\t"`cat /etc/system-release` >> $out_file_path
+echo -e "\tOS Info:\t"`cat /etc/os-release` >> $out_file_path
 
 echo -e "\n\n======================================== KERNEL INFO =========================================\n" >> $out_file_path
 echo -e "\tKernel Version:\t"`uname -r` >> $out_file_path
@@ -41,14 +41,14 @@ cat /etc/fstab|grep -v "#" >> $out_file_path
 echo -e "\n\n==================================== DISK PARTATION INFO =====================================\n" >> $out_file_path
 df -h >> $out_file_path
 
-echo -e "\n\n==================================== PHYSICAL VOLUME INFO ====================================\n" >> $out_file_path
-pvs >> $out_file_path
+#echo -e "\n\n==================================== PHYSICAL VOLUME INFO ====================================\n" >> $out_file_path
+#pvs >> $out_file_path
 
-echo -e "\n\n===================================== VOLUME GROUP INFO ======================================\n" >> $out_file_path
-vgs >> $out_file_path
+#echo -e "\n\n===================================== VOLUME GROUP INFO ======================================\n" >> $out_file_path
+#vgs >> $out_file_path
 
-echo -e "\n\n===================================== LOGICAL VOLUME INFO ====================================\n" >> $out_file_path
-lvs >> $out_file_path
+#echo -e "\n\n===================================== LOGICAL VOLUME INFO ====================================\n" >> $out_file_path
+#lvs >> $out_file_path
 
 echo -e "\n\n==================================== RUNNING SERVICE INFO ====================================\n" >> $out_file_path
 systemctl list-units | grep running|sort >> $out_file_path
